@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- HTML5 retrocompatibile cioè supporta i tag deprecati e obsoleti
+                     anche quelli già obsoleti in HTML 4.01 ma un documneto HTML5 con
+                     tali tag o attributi (bgcolor ad esempio) sebbene funzioni non
+                     sarebbe valido. -->
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+
+    </head>
+
+    <body>
+    
+        <p>
+        	Lorem Ipsum. Testo di prova per il paragrafo p.<br/> Questo tag va a capo automaticamente
+        	e lascia uno spazio tra un paragrafo e l'altro. Il tag &lt;br&gt; permette di mandare
+        	a capo il testo di un paragrafo
+        </p>
+        
+        <hr /> <!-- Questo tag crea una linea. Non va messo in un tag p. Funzionerebbe
+                    ma non sarebbe valido perchè non si può mettere un tag a livello
+                    di blocco come hr all interno di un tag text formatting block come p.
+                    Se lo metti p viene chiuso-->
+        
+        <p> <!-- Per aumentare il distacco tra un paragrafo e l'altro va messo un tag
+                 con un'entita che rappresenta lo spazio -->
+        &nbsp;
+        </p>
+        <p>
+        	Secondo paragrafo
+        </p>
+
+    </body>
+
+</html>
