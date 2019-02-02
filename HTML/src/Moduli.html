@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Moduli</title>
+
+    </head>
+
+    <body>
+    
+        <h3>Moduli</h3>
+        <p>Provo vari elementi ddei form. Alcuni sono specifici di HTML 5
+           <br /> e per ora non mi preoccupo di problemi di compatibilità con vecchi browsers
+           <br /> che non supportano HTML 5.        
+        </p>
+        
+        <!-- autocomplete significa che i campi vengono automaticamente completati con valori spediti in precedenza -->
+        <!-- ATTENZIONE: Questo form invia solo alla mia email. Per inviarlo alla tua email personale senza server segui
+                         https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server#how
+         -->
+        <form class="gform" data-email="ciaconicola@gmail.com"  action="https://script.google.com/macros/s/AKfycbw-SCylwtn495-PLVBdlTVQmMU4b9k_uY58wcTs/exec" method="post" autocomplete="on">
+        	<label for="testo">Testo</label> <br/> <input type="text" size="15" name="testo" id="testo"/>  <br />
+            <label for="testoMassimo">Testo di dimensione massima</label><br/> <input type="text" size="20" name="testoMassimo" id="testoMassimo" maxlength="9"/> <br/>
+            <label for="testoFocus">Testo con autofocus</label> <br/><input type="text" size="10" name="testoFocus" id="testoFocus" maxlength="9" autofocus="autofocus"/> <br/>
+            <label for="password">Password</label> <br/> <input type="password" id="password" name="password" maxlength="10" size="10"/>  <br/>     
+        
+            <label for="testoPr">Testo con valore predefinito</label> <br/> <input type="text" size="15" value="Input color" name="testoPr" id="testoPr"/>  <br />
+            <!-- Con placeholder a differnza di value il valore non vine submitted (se l'utente non fa alcun inserimento) -->
+            <label for="testoPl">Testo con placeholder</label> <br/> <input type="text" size="15" placeholder="Input preferred team" name="testoPl" id="testoPr"/>  <br />
+            <label for="testoTitle">Testo con placeholder in title</label> <br/> <input type="text" size="15" title="Input a fish name" name="testoTitle" id="testoTitle"/>  <br />
+        
+            <!--  L'attributo required impedisce il submit se il campo non viene compilato -->
+            <label for="richiesto"></label> Campo required <br/><input type="text" required="required" id="richiesto" name="richiesto"/> <br/>
+            <label for="testoPattern">Testo con pattern</label> <br/> <input id="testoPattern" name="testoPattern" title="Inserisci un numero di telefono a 10 cifre" pattern="\d{10}" required="required"/> <br/>
+        
+        
+        <h6>Nuovi tipi di campo input html 5</h6>
+        <label for="cerca">Cerca</label><input type="search" size="10" name="cerca" id="cerca" /> <br/>
+        <label for="telef">Telefono</label><input type="tel" size="10" name="telef" id="telef" /> <br/>
+        <label for="mail">E-Mail</label><input type="email" id="mail" name="mail"/>   
+            
+            <input type="reset" name="cancella" id="cancella" value="Reimposta" /> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="submit" value="Invia" name="Submit" id="Submit"/>
+        </form>
+
+    </body>
+
+</html>
