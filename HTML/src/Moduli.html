@@ -40,11 +40,32 @@
         <h6>Nuovi tipi di campo input html 5</h6>
         <label for="cerca">Cerca</label><input type="search" size="10" name="cerca" id="cerca" /> <br/>
         <label for="telef">Telefono</label><input type="tel" size="10" name="telef" id="telef" /> <br/>
-        <label for="mail">E-Mail</label><input type="email" id="mail" name="mail"/>   
+        <label for="mail">E-Mail</label><input type="email" id="mail" name="mail"/>   <br />
+        
+        <label>Data <input type="date" name="data" value ="data"/></label> <br/>
+        <!-- No more supported --><label>Data2 <input type="datetime" name="datatime" value ="datatime"/></label> <strong>Non più supportato</strong><br/>
+        <label>Data e ora <input type="datetime-local" name="datalocal" id ="datalocal"/></label> <br/>
+        <label>Mese <input type="month" name="mese" id ="mese"/></label> <br/>
+        <label>Settimana <input type="week" name="settimana" id ="settimana"/></label> <br/>
+        <label>Ora <input type="time" name="ora" id ="ora"/></label> <br/><br/>
+        
+        <label for="numero">Numero</label><input type="number" id="numero" name="numero"/> <br/> <br/>
+        <label for="range">Numero con range</label><input type="range" id="range" name="range" min="0" max="20" step="2"/> <br/> <br/>
+        <label for="colore">Colore</label><input type="color" id="colore" name="colore" /> <br/> <br/>
+        
+        <label for="area">Area di testo </label><br/><textarea rows="8" cols="50" id="area" name="area" wrap="hard"></textarea>  <br/>   
+        <label for="myFile">Select a file:</label> <input type="file" id="myFile" name="myFile"><br>    
+            
+        <input name="campoNascosto" id="campoNascosto" type="hidden" value="InformazioneDaInviare"/>    
             
             <input type="reset" name="cancella" id="cancella" value="Reimposta" /> &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="submit" value="Invia" name="Submit" id="Submit"/>
+           <input type="submit" value="Invia" name="Submit" id="Submit"/>
+          
+            
+          
+         <h3>Per radiobutton e checkbox ed elenchi a discesa vedi esempi libro  </h3>   
         </form>
+
 
     </body>
 
