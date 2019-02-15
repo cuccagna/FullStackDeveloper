@@ -1,0 +1,99 @@
+<!-- Esercizio molto semplice in cui metto insieme un po di cose -->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Esercizio HTML</title>
+
+    </head>
+
+    <body>
+        
+        <!-- Il modo in cui creo il layout mi pare che è deprecato,andrebbe fatto tutto coi css. Ad esempio valign è deprecato -->
+        
+        <table width="100%"> <!-- Con un valore percentuale la tabella si adatta alla pagina ma quando ridimensiono il contenuto si sposta. L'ho fatto cosi perchè anche la
+         pagina d'esempio è fatta così. Basta ridimensionarla
+         per renderesene conto.-->
+            <tr valign="top">
+                
+                <td>
+                    <h1>Hello World!</h1>
+                    <h2>A few facts about the world we live in</h2>
+                    <!-- Non andrebbe ridimensionata l'immagine,piuttosto modificata con Photoshop o altro in modo da portarla  a 400px di larghezza invece di ridimensionarla con l'attributo -->
+                    
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/220px-The_Earth_seen_from_Apollo_17.jpg" alt="Earth" width="400" align="left"/>
+                </td>
+                
+                <td align="right">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DrDm7uO4Fu0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+        
+            </tr>
+        </table>
+        
+        <p>Earth is the third planet from the Sun and is the largest of the terrestrial planets. The Earth is the only planet in our solar system not to be named after a Greek or Roman deity. The Earth was formed approximately 4.54 billion years ago and is the only known planet to support life.</p>
+        
+        <hr/>
+        <h3>About the earth</h3>
+        <ul>
+            <li>Mass: 5,972,190,000,000,000 billion kg</li>
+            <li>Equatorial Diameter: 12,756 km</li>
+            <li>Notable Moons: <a href="https://space-facts.com/the-moon/">The Moon</a></li>
+        </ul>
+        
+        <hr />
+        
+        <h3>Top 3 facts about the earth</h3>
+        <ol>
+            <li>The Earth’s rotation is gradually slowing</li>
+            <li>The Earth was once believed to be the centre of the universe/li>
+            <li>Earth has a powerful magnetic field</li>
+        </ol>
+        
+        <hr />
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Radius</th>
+                    <th>Average <br/>Temperature</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    
+                    <td>Mars</td>
+                    <td>3,403 km</td>
+                    <td>-46°c</td>
+                    
+                </tr>
+                
+                    <td>Venus</td>
+                    <td>6,052km</td>
+                    <td>462°c</td>
+                
+                <tr>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+        <hr/>
+        
+        <p>
+            Want to know more?
+        </p>
+        
+        <form action="https://space-facts.com/earth/?" >
+            <input type="submit" value="Click Here!"/>
+        </form>
+        
+    </body>
+    
+</html>
