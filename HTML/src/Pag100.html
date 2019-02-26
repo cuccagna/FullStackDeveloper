@@ -1,0 +1,171 @@
+<!-- Esercizio che usa come riferimento html4 transitional
+     senza usare i css. per tutta la formattazione vista qui
+     in realta' si dovrebbero usare i css. inoltre nel tag
+     colgroup uso l'attributo bgcolor che non è supportato
+     neanche in html4 e quindi alcuni browser non rendono il
+     colore per colonne (Si dovrebbero usare i css) -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Tabella</title>
+
+    </head>
+
+    <body>
+    
+        <p align="center"><strong><font size="6">TABELLA DEI VOTI</font></strong></p>
+        <p align="center"><strong><font size="6">CLASSE XYZ</font></strong></p>
+    	
+    	<table width="95%" border="1" cellspacing="1" cellpadding="1">
+    		
+    		<tr>
+    			<td width="11%" rowspan="2">
+    				<div align="center"> <strong>Alunno</strong></div>
+    			</td>
+    			<td colspan="2"><div align="center"><strong>INFORMATICA</strong></div></td>
+    			<td colspan="2"><div align="center"><strong>SISTEMI</strong></div></td>
+    			<td colspan="2"><div align="center"><strong>ELETTRONICA</strong></div></td>
+    			<td width="18%"><div align="center"><strong>MATEMATICA</strong></div></td>
+    			<td width="11%"><div align="center"><strong>ITALIANO</strong></div></td>
+    			<td width="10%"><div align="center"><strong>STORIA</strong></div></td>
+    			
+    		</tr>
+    		
+    		<tr>
+    			<td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		</tr>
+    		
+    		<tr>
+    			<td>Verdi</td>
+    			<td>5</td>
+    			<td>6</td>
+    			<td>3</td>
+    			<td>7</td>
+    			<td>4</td>
+    			<td>7</td>
+    			<td>6</td>
+    			<td>7</td>
+    			<td>7</td>
+    			
+    		</tr>
+    	</table>
+    	
+    	<p align="center"><strong><font size="6">TABELLA DEI VOTI</font></strong></p>
+        <p align="center"><strong><font size="6">CLASSE XYZ</font></strong></p>
+    	
+    	<table width="95%" border="0" cellspacing="1" cellpadding="1">
+    		
+    		<colgroup span="1" bgcolor="red"  />
+    		<colgroup span="2" bgcolor="orange" />
+    		<colgroup span="2" bgcolor="yellow" />
+    		<colgroup span="2" bgcolor="maroon" />
+    		<colgroup span="1" bgcolor="aqua" />
+    		<colgroup span="1" bgcolor="teal" />
+    		<colgroup span="1" bgcolor="olive" />
+    		<tr>
+    			<td width="11%" rowspan="2">
+    				<div align="center"> <strong>Alunno</strong></div>
+    			</td>
+    			<td colspan="2"><div align="center"><strong>INFORMATICA</strong></div></td>
+    			<td colspan="2"><div align="center"><strong>SISTEMI</strong></div></td>
+    			<td colspan="2"><div align="center"><strong>ELETTRONICA</strong></div></td>
+    			<td width="18%"><div align="center"><strong>MATEMATICA</strong></div></td>
+    			<td width="11%"><div align="center"><strong>ITALIANO</strong></div></td>
+    			<td width="10%"><div align="center"><strong>STORIA</strong></div></td>
+    			
+    		</tr>
+    		
+    		<tr>
+    			<td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		</tr>
+    		
+    		<tr align="center">
+    			<td>Verdi</td>
+    			<td>5</td>
+    			<td>6</td>
+    			<td>3</td>
+    			<td>7</td>
+    			<td>4</td>
+    			<td>7</td>
+    			<td>6</td>
+    			<td>7</td>
+    			<td>7</td>
+    			
+    		</tr>
+    	</table>
+    	
+    	<p align="center"><strong><font size="6">TABELLA DEI VOTI</font></strong></p>
+        <p align="center"><strong><font size="6">CLASSE XYZ</font></strong></p>
+    	
+    	<table width="95%" border="0" cellspacing="0 cellpadding="1">
+    		
+    		<colgroup span="1" bgcolor="red"  />
+    		<colgroup span="2" bgcolor="orange" />
+    		<colgroup span="2" bgcolor="yellow" />
+    		<colgroup span="2" bgcolor="maroon" />
+    		<colgroup span="1" bgcolor="aqua" />
+    		<colgroup span="1" bgcolor="teal" />
+    		<colgroup span="1" bgcolor="olive" />
+    		<tr>
+    			<td width="11%" rowspan="2">
+    				<div align="center"> <strong>Alunno</strong></div>
+    			</td>
+    			<td colspan="2"><div align="center"><strong>INFORMATICA</strong></div></td>
+    			<td colspan="2"><div align="center"><strong>SISTEMI</strong></div></td>
+    			<td colspan="2"><div align="center"><strong>ELETTRONICA</strong></div></td>
+    			<td width="18%"><div align="center"><strong>MATEMATICA</strong></div></td>
+    			<td width="11%"><div align="center"><strong>ITALIANO</strong></div></td>
+    			<td width="10%"><div align="center"><strong>STORIA</strong></div></td>
+    			
+    		</tr>
+    		
+    		<tr>
+    			<td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">PRATICO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		    <td width="10%"><div align="center">SCRITTO</div></td>
+    		</tr>
+    		
+    		<tr align="center">
+    			<td>Verdi</td>
+    			<td>5</td>
+    			<td>6</td>
+    			<td>3</td>
+    			<td>7</td>
+    			<td>4</td>
+    			<td>7</td>
+    			<td>6</td>
+    			<td>7</td>
+    			<td>7</td>
+    			
+    		</tr>
+    	</table>
+    </body>
+
+</html>
