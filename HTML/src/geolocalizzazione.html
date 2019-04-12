@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Geolocalizzazione</title>
+        
+        <script type="text/javascript">
+           function geolocalizza()
+           {
+        	   
+        	   if(navigator.geolocation)
+        		   navigator.geolocation.getCurrentPosition(localizza,gestisciErrore,{enableHighAccuracy:true});
+        	   else
+        		   alert("Questo browser non supporta la geolocalizzazione");
+        	   
+           }
+           
+           function localizza(posizione)
+           {
+        	   document.getElementById("demo").innerHTML="Latitudine: " +posizione.coords.latitude + "<br />  Longitudine: "+posizione.coords.longitude;
+           }
+           
+           function gestisciErrore(errore)
+           {
+        	   switch(errore.code)
+        	   {
+        	      case errore.PERMISSION_DENIED:
+        	      alert("Permesso di geolocalizzazione negato");
+        	      break;      	      
+        	      
+        	      case errore.POSITION_UNAVAILABLE:
+            	  alert("Rete per la geolocalizzazione non disponibile");
+        	      break;
+            	  
+        	      case errore.TIMEOUT:
+        	      alert("Tempo eccessivo per la localizzazione");
+            	  break;
+            	      
+            	  default:
+            		  alert("Errore sconosciuto");
+            	  break;
+        	   }
+           }
+        </script>
+
+    </head>
+
+    <body>
+    
+        <button onClick="geolocalizza();">Scopri Posizione</button>
+        <p id="demo"></p>
+
+    </body>
+
+</html>

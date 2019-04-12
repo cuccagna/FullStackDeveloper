@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Web Worker</title>
+        
+        <script type="text/javascript">
+        	var worker = new Worker("myworker.js");
+        	
+        	worker.onmessage = function(event){
+        		document.getElementById("num").textContent += event.data + " ";
+        	}
+        	
+        	function impostaNumero()
+        	{
+        		var number = document.sequenza.elements["numero"].value;
+        		worker.postMessage(number);
+        	}
+        	
+        	function stopSequenza()
+        	{
+        		worker.terminate();
+        	}
+        </script>
+
+    </head>
+
+    <body>
+    
+        <form name="sequenza" method="post">
+            <label for="numero">Scegli un numero</label>
+        	<input name="numero" id="numero" type="number" min="1" max="10" required/>
+        	<input type="button" name="start" id="start" value="inizia sequenza" onClick="impostaNumero()"/>
+            <input type="button" value="ferma sequenza" onClick="stopSequenza()"/>
+        </form>
+        
+        <div id="num"></div>
+
+    </body>
+
+</html>

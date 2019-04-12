@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Web Storage</title>
+
+		<script type="text/javascript">
+			
+			function cancella()
+			{
+				localStorage.clear();
+			}
+			
+			function carica()
+			{
+				for(var j=0 ; j<localStorage.length ; j++)
+				{
+					var chiave = localStorage.key(j);
+					var valore = localStorage[chiave];
+					
+					if(valore =="true") //è un checkbox.  Non gestico il caso particolare che viene inserito true in un campo di testo
+						document.quiz.elements[chiave].checked = true;	
+					else //radio oppure select o text
+					{
+					   if(chiave == "gruppoRadio") //lo specifico elemento radio
+					   {
+				          var radioArray = document.quiz.elements[chiave]; //accedo all'array di radio
+					      
+					      for(var indice=0 ; indice<radioArray.length ; indice++)
+					      {
+					    	  if(radioArray[indice].value == valore)
+					    	  {
+					    		  radioArray[indice].checked = true;
+					    		  break;
+					    	  }	  
+					      }
+					   }
+				       else //text select o textarea
+						  document.quiz.elements[chiave].value = valore; 
+					}
+				}
+			}
+			
+			function salva()
+			{
+				for(var i=0 ; i<document.quiz.elements.length-3;i++)
+				{
+					var currElement = document.quiz.elements[i]
+					if(currElement.type == "text" || currElement.type == "textarea" || currElement.type == "select-one")
+					{
+						if(currElement.value) //se non è lasciato vuoto
+						   localStorage[currElement.name]=currElement.value;
+					}
+					else if(currElement.type == "checkbox")
+					{
+						if(currElement.checked)
+							localStorage[currElement.name]=currElement.checked;
+					}
+					else if(currElement.type="radio")
+					{
+						if(currElement.checked)
+						{
+							localStorage[currElement.name]=currElement.value;	
+						}
+						
+					}
+				}
+			}
+		</script>
+    </head>
+
+    <body onload="carica();">
+    
+        <h1>QUIZ HTML 5</h1>
+        <form name="quiz" id="quiz" method="post" action="mailto:">
+        	
+        	<label for="name">Nome : </label> <input type="text" name="nome" id="nome"/>
+        	<br/>
+        	<label for="cognome">Cognome : </label> <input type="text" name="cognome" id="cognome"/>
+        	<br/>
+        	<label for="disegno">Come si chiama la superficie in cui si può disegnare in HTML5 ?</label> <input type="text" name="disegno" id="disegno"/> <br/>
+        	<label for="geo">Cos è la geolocalizzazione?</label> <input type="text" name="geo" id="geo"/> <br/>
+        	
+        	Quali browser tra i seguenti supportano in modo nativo la geolocalizzazione? <br/>
+        	<label for="ie8">Internet Explorer 8</label> <input type="checkbox" name="ie8" id="ie8" value="ie8"/>
+            <br/>
+            <label for="opera10">Opera 10</label> <input type="checkbox" name="opera10" id="" value="opera10"/>
+            <br/>
+            <label for="firefox35">Firefox 3.5</label> <input type="checkbox" name="firefox35" id="firefox35" value="firefox35"/>
+        
+           <br/><br/>
+           Seleziona uno di questi numeri:<br/>
+           <label >
+           		<input type="radio" name="gruppoRadio" value="uno"/>
+           		Uno
+           </label> <br />
+           
+           <label>
+           		<input type="radio" name="gruppoRadio" value="due"/>
+           		Due
+           </label>
+           
+           <br/>
+           
+           <label for="struttura">Quali di questi non è un elemento strutturale di HTML5</label> <br/>
+        	<select name="struttura" id="struttura">
+        		<option value="area">area</option>
+        	    <option value="nav">nav</option>
+        	    <option value="article">article</option>
+        	</select>  <br/>
+        	
+        	<input type="button" value="Salva" onClick="salva();"/>
+        	<input type="reset" value="Cancella valori" onClick="cancella();"/>
+        	<input type="submit" value="Invia test"/>
+        </form>
+
+    </body>
+
+</html>
