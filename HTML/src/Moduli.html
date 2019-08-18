@@ -10,13 +10,13 @@
     </head>
 
     <body>
-    
+
         <h3>Moduli</h3>
         <p>Provo vari elementi dei form. Alcuni sono specifici di HTML 5
            <br /> e per ora non mi preoccupo di problemi di compatibilità con vecchi browsers
-           <br /> che non supportano HTML 5.        
+           <br /> che non supportano HTML 5.
         </p>
-        
+
         <!-- autocomplete significa che i campi vengono automaticamente completati con valori spediti in precedenza -->
         <!-- ATTENZIONE: Questo form invia solo alla mia email. Per inviarlo alla tua email personale senza server segui
                          https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server#how
@@ -25,45 +25,45 @@
         	<label for="testo">Testo</label> <br/> <input type="text" size="15" name="testo" id="testo"/>  <br />
             <label for="testoMassimo">Testo di dimensione massima</label><br/> <input type="text" size="20" name="testoMassimo" id="testoMassimo" maxlength="9"/> <br/>
             <label for="testoFocus">Testo con autofocus</label> <br/><input type="text" size="10" name="testoFocus" id="testoFocus" maxlength="9" autofocus="autofocus"/> <br/>
-            <label for="password">Password</label> <br/> <input type="password" id="password" name="password" maxlength="10" size="10"/>  <br/>     
-        
+            <label for="password">Password</label> <br/> <input type="password" id="password" name="password" maxlength="10" size="10"/>  <br/>
+
             <label for="testoPr">Testo con valore predefinito</label> <br/> <input type="text" size="15" value="Input color" name="testoPr" id="testoPr"/>  <br />
             <!-- Con placeholder a differnza di value il valore non vine submitted (se l'utente non fa alcun inserimento) -->
             <label for="testoPl">Testo con placeholder</label> <br/> <input type="text" size="15" placeholder="Input preferred team" name="testoPl" id="testoPr"/>  <br />
             <label for="testoTitle">Testo con placeholder in title</label> <br/> <input type="text" size="15" title="Input a fish name" name="testoTitle" id="testoTitle"/>  <br />
-        
+
             <!--  L'attributo required impedisce il submit se il campo non viene compilato -->
             <label for="richiesto"></label> Campo required <br/><input type="text" required="required" id="richiesto" name="richiesto"/> <br/>
             <label for="testoPattern">Testo con pattern</label> <br/> <input id="testoPattern" name="testoPattern" title="Inserisci un numero di telefono a 10 cifre" pattern="\d{10}" required="required"/> <br/>
-        
-        
+
+
         <h6>Nuovi tipi di campo input html 5</h6>
         <label for="cerca">Cerca</label><input type="search" size="10" name="cerca" id="cerca" /> <br/>
         <label for="telef">Telefono</label><input type="tel" size="10" name="telef" id="telef" /> <br/>
         <label for="mail">E-Mail</label><input type="email" id="mail" name="mail"/>   <br />
-        
+
         <label>Data <input type="date" name="data" value ="data"/></label> <br/>
         <!-- No more supported --><label>Data2 <input type="datetime" name="datatime" value ="datatime"/></label> <strong>Non più supportato</strong><br/>
         <label>Data e ora <input type="datetime-local" name="datalocal" id ="datalocal"/></label> <br/>
         <label>Mese <input type="month" name="mese" id ="mese"/></label> <br/>
         <label>Settimana <input type="week" name="settimana" id ="settimana"/></label> <br/>
         <label>Ora <input type="time" name="ora" id ="ora"/></label> <br/><br/>
-        
+
         <label for="numero">Numero</label><input type="number" id="numero" name="numero"/> <br/> <br/>
         <label for="range">Numero con range</label><input type="range" id="range" name="range" min="0" max="20" step="2"/> <br/> <br/>
         <label for="colore">Colore</label><input type="color" id="colore" name="colore" /> <br/> <br/>
-        
-        <label for="area">Area di testo </label><br/><textarea rows="8" cols="50" id="area" name="area" wrap="hard"></textarea>  <br/>   
-        <label for="myFile">Select a file:</label> <input type="file" id="myFile" name="myFile"><br>    
-            
-        <input name="campoNascosto" id="campoNascosto" type="hidden" value="InformazioneDaInviare"/>    
-            
+
+        <label for="area">Area di testo </label><br/><textarea rows="8" cols="50" id="area" name="area" wrap="hard"></textarea>  <br/>
+        <label for="myFile">Select a file:</label> <input type="file" id="myFile" name="myFile"><br>
+
+        <input name="campoNascosto" id="campoNascosto" type="hidden" value="InformazioneDaInviare"/>
+
             <input type="reset" name="cancella" id="cancella" value="Reimposta" /> &nbsp; &nbsp; &nbsp; &nbsp;
            <input type="submit" value="Invia" name="Submit" id="Submit"/>
-          
-            
-          
-         <h3>Per radiobutton e checkbox ed elenchi a discesa vedi esempi libro  </h3>   
+
+
+
+         <h3>Per radiobutton e checkbox ed elenchi a discesa vedi esempi libro  </h3>
         <button type="submit">Submit</button>
         </form>
 

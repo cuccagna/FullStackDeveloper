@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Pseudoclasse</title>
+        
+        <style type="text/css">
+			div p:first-child {
+				text-indent:12pt;
+				color:yellow;
+			}
+			
+			p:first-child {
+				
+				color:red;
+			}
+        </style>
+    
+    </head>
+
+    <body>
+    
+        <p>Paragrafo fuori dal div,primo figlio di body<br /><small>Seconda riga</small></p>
+        <div>Sono nel div<p>Primo paragrafo <strong>nel</strong> div<br />Ciao</p>
+        
+        <p>Secondo paragrafo</p>
+        
+        <div><p>Paragrafo annidato in un altro div, di cui il paragrafo è il primo figlio</p></div>
+        </div>
+<p>Paragrafo fuori dal div, che non è il primo figlio<br /><small>Seconda riga</small></p>
+    
+    <div><strong>Tag strong dentro il div</strong><p>Primo paragrafo nel div, ma non il primo tag</p></div>
+    </body>
+
+</html>
