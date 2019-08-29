@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        
+        <style type="text/css">
+        	
+        	*{
+        		box-sizing: border-box;
+        	}
+        	
+        	.row{
+        		display:flex;
+        		flex-wrap:wrap;
+        	}
+        
+        	.column{
+        		flex:25%;
+        		padding:0 4px;
+        	}
+        	
+        	.column img{
+        		width:100%;
+        		margin: 2px 0;
+        	}
+        	
+        	@media (max-width:800px){
+        		.column{
+        		flex:50%;
+        	}
+        	
+        	@media (max-width:500px){
+        		.column{
+        		flex:100%;
+        	}
+        </style>
+
+    </head>
+
+    <body>
+    <div class="row">
+    
+        <div class="column">
+        <img src="../immagini/snow.jpg" >
+		<img src="../immagini/forest.jpg" >
+		<img src="../immagini/mountains.jpg" >
+        </div>
+        
+        <div class="column">
+        <img src="../immagini/snow.jpg" >
+		<img src="../immagini/forest.jpg" >
+		<img src="../immagini/mountains.jpg" >
+        </div>
+        
+        <div class="column">
+        <img src="../immagini/snow.jpg" >
+		<img src="../immagini/forest.jpg" >
+		<img src="../immagini/mountains.jpg" >
+        </div>
+        
+        <div class="column">
+        <img src="../immagini/snow.jpg" >
+		<img src="../immagini/forest.jpg" >
+		<img src="../immagini/mountains.jpg" >
+        </div>
+        
+     </div>
+    </body>
+
+</html>
