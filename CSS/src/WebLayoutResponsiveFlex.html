@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Flex Layout</title>
+		
+		<style type="text/css">
+			
+			*{
+				box-sizing:border-box;	
+			}
+			
+			body,html{
+				margin:0px;
+				padding:0px;
+				
+			}
+			
+			.container{
+				display: flex;
+				flex-wrap: wrap;
+				
+			}
+			
+			.mainheader{
+				flex:100%;
+				padding:35px 0;
+				color:white;
+				text-align: center;
+				background-color: rgb(50,180,200);
+				
+			}
+			
+			nav{
+				background-color: black;
+				flex:100%;
+				
+			}
+			
+			ul.navbar{
+				list-style:none;
+				overflow: hidden;
+				margin:0;
+				padding:0;
+			}
+			
+			
+			ul.navbar > li{
+			    
+				float:left;
+				text-align:center;
+			}
+			
+			ul.navbar  a:hover{
+				color:black;
+				background-color:white;
+			}
+			
+			.navbar a{
+			    display:block;
+				text-decoration:none;
+				color:white;
+				padding:15px;
+				font-size:large;
+			}
+			
+			
+				
+				.side{
+				flex:30%;
+				padding:10px;
+				padding-top:20px;
+				background-color:Azure;
+			}
+			
+			.content{
+				flex:70%;
+				padding:10px;
+				padding-top:20px;
+				
+				}
+				
+			.myimg{
+				
+				background-color:lightgray;
+				padding:5px;
+				margin-bottom:15px;
+				
+			}
+			
+			.foot{
+				background-color:powderblue;
+				text-align:center;
+				padding:30px;
+				align-self:flex-end;
+			}
+			
+			@media (max-width:500px){
+				ul.navbar > li{
+			    
+				float:none;
+			}
+			
+			.side , .content{
+				flex:100%;
+				}
+				
+			
+		</style>
+    </head>
+
+    <body>
+    
+        <div class="container">
+        	
+        	<header class="mainheader">
+        		<h1>My Website</h1>
+        		<p>With a flexible layout</p>
+        	</header>
+        	
+        	<nav>
+        		<ul class="navbar">
+        			<li><a href="#">Link</a></li>
+        			<li><a href="#">Link</a></li>
+        			<li><a href="#">Link</a></li>
+        			<li><a href="#">Link</a></li>
+        		</ul>
+        	</nav>
+        	
+        	
+        	<section class="side">
+        		<header>
+        			<h1>About me</h1>
+        		</header>
+        		<h4>
+        			Photo of me
+        		</h4>
+        		<div class="myimg">
+        			<img src="../immagini/forest.jpg" style="width:100%;"></img>
+        	    </div>
+        	    
+        	    <p>
+        	    	Some text here. Lorem ipsum dolorem sii amet.	Lorem ipsum dolor sit ame.
+        	    </p>
+        	    
+        	    <h2>More text</h2>
+        	    <p>
+        	    	Loremi ipsum dolorem sii amet.
+        	    </p>
+        	    
+        	    <div class="myimg" style="height:50px;">
+        	    </div>
+        	    
+        	    <div class="myimg" style="height:50px;">
+        	    </div>
+        	    
+        	    <div class="myimg" style="height:50px;">
+        	    </div>
+        	    
+        	    <div class="myimg" style="height:50px;">
+        	    </div>
+        	</section>
+        	
+        	<section class="content">
+        	<article style="padding-top:5px;">
+        		<header>
+        			<h1 >TITLE HEADING</h1>
+        			<h4>Title description,Aug 30 2019</h4>
+        		</header>
+        			<div class="myimg" style="height:265px;"></div>
+        	<p>
+        	Lorem ipsum
+        	</p>
+        	</article>
+        	
+        	<article style="padding-top:5px;">
+        		<header>
+        			<h1 >TITLE HEADING</h1>
+        			<h4>Title description,Aug 31 2019</h4>
+        		</header>
+        			<div class="myimg" style="height:265px;"></div>
+        		
+        	<p>
+        		Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+        	</p>
+        	</article>
+        	</section>
+        	</div>
+        
+        <footer class="foot">
+        	Footer
+        </footer>
+
+    </body>
+
+</html>
