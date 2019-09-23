@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Float experiment</title>
+  <style>
+  /*
+  Il primo e il secondo div sono sovrapposti completamente se non c è testo in nessuno
+  dei div. Ho modificato l esempio mettendo del testo nel secondo div e aggiunto un'
+  animazione per fare vedere cosa succede quando la dimensione del secondo div è piu 
+  grande o piu piccola del primo div (quello con float). Se il secondo div è piu grande il testo
+  va a destra. Se è uguale o pu piccolo il secondo div va sotto (in realta è il testo che va sotto
+  perchè il secondo div inizia dove inizia il div di tipo float e si estende oltre a destra
+  o in basso in modo da visualizzare il testo).
+  
+  Se metto clear al secondo div (decommenta la classe pulisci) ottengo i 3 div per esteso
+  senza sovrapposizioni.
+  
+  */
+    .box {
+      width: 400px;
+      height: 400px;
+      background-color: yellow;
+      opacity: 0.3;
+      
+    }
+    
+    .secondbox{
+    -webkit-animation: change 3s infinite alternate linear;
+    animation: change 3s infinite alternate linear;
+    }
+    
+    @-webkit-keyframes change{
+    from {width: 300px;}
+    to {width:500px;}
+    }
+    
+    @keyframes change{
+    from {width: 300px;} to {width:500px;}
+    }
+    
+    /*
+    .pulisci{
+    clear:left;
+    }*/
+    
+    
+    
+    .box:first-child {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    
+  </div>
+
+  <div class="box secondbox pulisci" >
+    ff
+  </div>
+
+  <div class="box">
+    
+  </div>
+</body>
+</html>

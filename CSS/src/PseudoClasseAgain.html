@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Pseudo-classe avanzato</title>
+
+		
+		<style type="text/css">
+		
+		/*
+		 * Lo scopo è selezionare solo gli elementi figli che sono 4 elementi di classe
+		 * .forParagraph anche se in mezzo ci sono altri elementi che non sono di questa
+		 * classe
+		 * Il secondo div funziona pure nonostante abbia 5 elementi di classe .forParagraph
+		 * perchè gli elementi selezionati con la classe .forParagraph sono contati e quindi
+		 * raggruppati in base al tipo di elemento e siccome ci sono 4 p elements di classe
+		 * .forParagraph la selezione avviene (l'elemento span non viene considerato o meglio)
+		 * viene considerato perchè anche lui di classe .fprParagraph ma a parte dai paragrafi
+		 * e non viene selezionato perchè è solo 1 elemento. Nel terzo esempio ci sono 4 span
+		 * e allora avviene la selezione)
+		 *
+		 * Nota come nel quarto div il link viene ignorato perchè nth-last-of-type ignora
+		 * gli elementi che non matchano la regola (il link non ha la classe indicata).
+		 */
+		
+			.forParagraph:nth-last-of-type(4):first-of-type,
+			.forParagraph:nth-last-of-type(4):first-of-type ~ .forParagraph
+			{
+				color: red;
+			}
+		</style>
+
+    </head>
+
+    <body>
+    
+    	<h1>Primo div</h1>
+    
+        <div>
+        
+        	<p class="forParagraph">Hi</p>
+        	<p class="forParagraph">Hello</p>
+        	<p class="forParagraph">Goodbye</p>
+        	<p class="forParagraph">By by</p>
+        	
+        </div>
+        
+        <h1>Secondo div</h1>
+        
+        <div>
+        
+        	<p class="forParagraph">Hi</p>
+        	<span class="forParagraph">Hello</span>
+        	<p class="forParagraph">Goodbye</p>
+        	<p class="forParagraph">Goodbye again</p>
+        	<p class="forParagraph">By by</p>
+        	
+        </div>
+
+
+		<h1>Terzo div</h1>
+        
+        <div>
+        
+        	<p class="forParagraph">Hi</p>
+        	<span class="forParagraph">Hello</span>
+        	<span class="forParagraph">Hello</span>
+        	<span class="forParagraph">Hello</span>
+        	<span class="forParagraph">Hello</span>
+        	<p class="forParagraph">Goodbye</p>
+        	<p class="forParagraph">Goodbye again</p>
+        	<p class="forParagraph">By by</p>
+        	
+        </div>
+        
+        <h1>Quarto div</h1>
+        
+        <div>
+        
+        	<p class="forParagraph">Hi</p>
+        	<p class="forParagraph">Goodbye</p>
+        	<a href="#">Link vuoto</a>
+        	<p class="forParagraph">Goodbye again</p>
+        	<p class="forParagraph">By by</p>
+        	
+        </div>
+    </body>
+
+</html>
