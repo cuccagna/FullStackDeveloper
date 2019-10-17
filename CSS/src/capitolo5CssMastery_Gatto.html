@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> Non si mette perchè non ho istruzioni reponsive precise come media query-->
+        <meta name="description" content="Sito con intestazione con sfondo. Esercizio si rifa al libro css master, esercizio finisched-example.html del capitolo 5">
+        <meta charset="UTF-8">
+        <title>Cat Page</title>
+
+		<style type="text/css">
+		
+			body{
+			    padding:0;
+				margin:0;
+				font-family: "Helvetica Neue", Arial, sans-serif;
+			}
+			
+			.sfondo-intro{
+				position:relative;
+				/*margin:0; servirebbe per h1 che ha un margine di default,non per header*/
+      			height:600px; /*perche senza contenuto h1 non visualizza lo sfondo*/
+      			background-image: url(../immagini/big-cat.jpg);
+      			background-position: 50% 30%; /*per mantenere il gatto centrato quando ridimensiono la finestra*/
+      			background-size: cover;
+      			
+      			
+			}
+			
+			.profile-box{
+				width:160px;
+				background-color: #FFF;
+				position:absolute;
+				left: 5%;
+				bottom: -60px;
+				-webkit-border-radius: .5em;
+				border-radius : .5em;
+				padding: .5em;
+				margin:0; /*Because the figure element has a default margin*/
+			}
+			
+			.profile-box img{
+				max-width:100%; /*max-width a differenza di width fa si che l'immagine sia larga al massimo quanto è larga l immagine. Prova a mettere width:400px ad esempio in .profile-box per vedere che succede (l immagine non si espande fino a 400px)*/
+				height: auto; /*Altezza settata in modo da continuare a rispettare l aspect ratio dell immagine*/
+				
+			}
+			
+			.didascalia{
+				text-align:center;
+				font-size: 1.2em;
+				color: #555;
+				font-weight: 600;
+			}
+		</style>
+
+    </head>
+
+
+
+    <body>
+    
+        <header class="sfondo-intro" role="banner">
+			<figure class="profile-box">
+				<img  src="../immagini/profile.jpg" alt="Charles The Cat"/>
+				<figcaption class="didascalia">@CharlesTheCat</figcaption>
+			</figure>
+		
+		</header>
+    </body>
+
+</html>
